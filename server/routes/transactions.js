@@ -1,4 +1,4 @@
-const { addIncome, getIncome, deleteIncome } = require("../controllers/transControl");
+const { addIncome, getIncome, deleteIncome } = require("../controllers/incomeControl");
 
 const router = require("express").Router();
 
