@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import "./App.css"
 import Layout from './components/layout/Layout'
 import Sidebar from './components/sidebar/Sidebar'
@@ -7,21 +7,33 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Dashbaord from './components/dashboard/Dashbaord';
+import Dashboard from './components/dashboard/Dashboard';
+import Income from './components/income/Income';
+import Expense from './components/expense/Expense';
 
 const App = () => {
+
+  const layoutFunc = useMemo(() => {
+    return <Layout />
+  }, [])
+
   return (
     <>
       <Router>
         <div className="container-wrapper">
-          <Layout />
+          {layoutFunc}
           <div className="main-container">
             <Sidebar />
+            <div className="main">
+              <Routes>
+                <Route exact path="/dashboard" element={<Dashboard />} />
+                <Route exact path="/incomes" element={<Income />} />
+                <Route exact path="/expenses" element={<Expense />} />
+              </Routes>
+            </div>
           </div>
         </div>
-        <Routes>
-          <Route exact path="/" element={<Dashbaord />} />
-        </Routes>
+
       </Router>
     </>
   )

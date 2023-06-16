@@ -15,7 +15,7 @@ const Sidebar = () => {
                 </div>
                 <ul className='menu-items'>
                     <Link to='/dashboard' className='active'><i className="fa-solid fa-chart-line"></i>Dashboard</Link>
-                    <Link to='/transactions' className='active'><i className="fa-solid fa-credit-card"></i>View Transactions</Link>
+                    <Link to='/dashboard' className='active'><i className="fa-solid fa-credit-card"></i>View Transactions</Link>
                     <Link to='/incomes' className='active'><i className="fa-solid fa-money-bill-trend-up"></i>Incomes</Link>
                     <Link to='/expenses' className='active'><i className="fa-solid fa-money-bill-transfer"></i>Expenses</Link>
                 </ul>
