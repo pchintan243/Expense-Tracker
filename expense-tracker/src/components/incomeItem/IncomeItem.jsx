@@ -51,8 +51,6 @@ const IncomeItem = ({ id, title, amount, date, category, description, deleteItem
         }
     }
 
-    console.log('type', type)
-
     const dateFormat = (date) => {
         return moment(date).format('DD/MM/YYYY')
     }

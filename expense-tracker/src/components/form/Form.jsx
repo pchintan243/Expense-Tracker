@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../../context/globalContext';
 import './form.css'
 
 const Form = () => {
-    const { addIncome, getIncome, error, setError } = useGlobalContext()
+    const { addIncome, getIncome } = useGlobalContext()
     const [inputState, setInputState] = useState({
         title: '',
         amount: '',
@@ -18,12 +18,12 @@ const Form = () => {
 
     const handleInput = name => e => {
         setInputState({ ...inputState, [name]: e.target.value })
-        // setError('')
     }
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         addIncome(inputState)
+        getIncome()
         setInputState({
             title: '',
             amount: '',
@@ -35,7 +35,6 @@ const Form = () => {
 
     return (
         <form onSubmit={handleSubmit} className='form-tag'>
-            {error && <p className='error'>{error}</p>}
             <div className="input-control">
                 <input
                     type="text"
