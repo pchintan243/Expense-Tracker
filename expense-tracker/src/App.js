@@ -10,8 +10,12 @@ import {
 import Dashboard from './components/dashboard/Dashboard';
 import Income from './components/income/Income';
 import Expense from './components/expense/Expense';
+import { useGlobalContext } from './context/globalContext';
 
 const App = () => {
+
+  const global = useGlobalContext();
+  console.log(global);
 
   const layoutFunc = useMemo(() => {
     return <Layout />

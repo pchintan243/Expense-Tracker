@@ -58,7 +58,7 @@ a {
     text-decoration: none;
 }
 
-i {
+.side-icon {
     color: rgba(34, 34, 96, 0.6);
     font-size: 1.4rem;
     transition: all .4s ease-in-out;
