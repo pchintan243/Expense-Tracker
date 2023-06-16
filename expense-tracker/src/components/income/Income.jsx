@@ -14,13 +14,13 @@ const Income = () => {
         <div className="main-income">
             <div className="income-inner">
                 <h1>Incomes</h1>
-                <h2 className="total-income">Total Income: <span>${totalIncome()}</span></h2>
+                <h2 className="total-income">Total Income: <span className='span-tag'>${totalIncome()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
                         <Form />
                     </div>
                     <div className="incomes">
-                        {/* {incomes.map((income) => {
+                        {incomes.map((income) => {
                             const { _id, title, amount, date, category, description, type } = income;
                             return <IncomeItem
                                 key={_id}
@@ -31,10 +31,10 @@ const Income = () => {
                                 date={date}
                                 type={type}
                                 category={category}
-                                indicatorColor="#42AD00"
+                                // indicatorColor="#42AD00"
                                 deleteItem={deleteIncome}
                             />
-                        })} */}
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .sidebar-container {
     padding: 2rem 1.5rem;
-    width: 374px;
+    width: 274px;
     height: 100%;
     background: rgba(252, 246, 249, 0.78);
     border: 3px solid #FFFFFF;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 
 .user-logo {
@@ -68,7 +68,7 @@ a:hover {
     color: rgba(34, 34, 96, 1) !important;
 }
 
-i:hover {
+.side-icon:hover {
     color: rgba(34, 34, 96, 1) !important;
 
 }

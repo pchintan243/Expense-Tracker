@@ -9,7 +9,7 @@ const Sidebar = () => {
             <nav className="sidebar-container">
                 <div className="user-logo">
                     <img src="https://t4.ftcdn.net/jpg/05/11/55/91/360_F_511559113_UTxNAE1EP40z1qZ8hIzGNrB0LwqwjruK.jpg" alt="" />
-                    <div className="text">
+                    <div className="text-sidebar">
                         <h2 className='name-tag'>Chintan</h2>
                         <p className='money-tag'>Your Money</p>
                     </div>
