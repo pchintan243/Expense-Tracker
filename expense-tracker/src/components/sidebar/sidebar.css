@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* gap: 2rem; */
 }
 
 .user-logo {
@@ -52,25 +51,24 @@ a {
     font-weight: 500;
     cursor: pointer;
     transition: all .4s ease-in-out;
-    color: rgba(34, 34, 96, .6);
+    color: rgba(34, 34, 96, .9);
     padding-left: 1rem;
     position: relative;
     text-decoration: none;
 }
 
 .side-icon {
-    color: rgba(34, 34, 96, 0.6);
+    color: rgba(34, 34, 96, 0.9);
     font-size: 1.4rem;
     transition: all .4s ease-in-out;
 }
 
 a:hover {
-    color: rgba(34, 34, 96, 1) !important;
+    color: rgb(10, 10, 62) !important;
 }
 
 .side-icon:hover {
-    color: rgba(34, 34, 96, 1) !important;
-
+    color: rgb(10, 10, 62) !important;
 }
 
 .active::before {

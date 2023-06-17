@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./sidebar.css"
 
 const Sidebar = () => {
-    const [loc, setLoc] = useState('/dashboard')
+    const [loc, setLoc] = useState(window.location.pathname)
     return (
         <>
             <nav className="sidebar-container">
@@ -16,12 +16,11 @@ const Sidebar = () => {
                 </div>
                 <ul className='menu-items'>
                     <Link to='/dashboard' className={loc === '/dashboard' ? 'active' : ''} onClick={() => setLoc("/dashboard")}><i className="fa-solid fa-chart-line side-icon"></i>Dashboard</Link>
-                    <Link to='/dashboard' className={loc === '/dashboard' ? 'active' : ''} onClick={() => setLoc("/dashboard")}><i className="fa-solid fa-credit-card side-icon"></i>View Transactions</Link>
                     <Link to='/incomes' className={loc === '/incomes' ? 'active' : ''} onClick={() => setLoc("/incomes")}><i className="fa-solid fa-money-bill-trend-up side-icon"></i>Incomes</Link>
                     <Link to='/expenses' className={loc === '/expenses' ? 'active' : ''} onClick={() => setLoc("/expenses")}><i className="fa-solid fa-money-bill-transfer side-icon"></i>Expenses</Link>
                 </ul>
                 <div>
-                    <Link to='/signout' className='active'><i className="fa-solid fa-sign-out side-icon"></i>Sign Out</Link>
+                    <Link to='/signout' className={loc === '/signout' ? 'active' : ''} onClick={() => setLoc("/signout")}><i className="fa-solid fa-sign-out side-icon"></i>Sign Out</Link>
                 </div>
             </nav>
         </>
