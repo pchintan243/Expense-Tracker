@@ -43,7 +43,7 @@ const Dashboard = () => {
                         </div>
                         <div className="history-con">
                             <History />
-                            <h2 className="salary-title">Min <span className='salary-title-span'>Salary</span>Max</h2>
+                            <h2 className="salary-title">Min <span className='salary-title-span'>Income</span>Max</h2>
                             <div className="salary-item">
                                 <p className='salary-item-p'>
                                     ${Math.min(...incomes.map(item => item.amount))}

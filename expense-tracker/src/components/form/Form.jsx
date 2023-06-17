@@ -40,7 +40,7 @@ const Form = () => {
                     type="text"
                     value={title}
                     name={'title'}
-                    placeholder="Salary Title"
+                    placeholder="Income Title"
                     onChange={handleInput('title')}
                     className='field-tag'
                 />
@@ -49,7 +49,7 @@ const Form = () => {
                 <input value={amount}
                     type="text"
                     name={'amount'}
-                    placeholder={'Salary Amount'}
+                    placeholder={'Income Amount'}
                     onChange={handleInput('amount')}
                     className='field-tag'
                 />
@@ -87,8 +87,7 @@ const Form = () => {
                     name='Add Income'
                     className='sub-btn'
                 >
-                    <i className="fa-solid fa-plus"></i>
-                    Add Income
+                    <i className="fa-solid fa-plus"></i> Add Income
                 </button>
             </div>
         </form>

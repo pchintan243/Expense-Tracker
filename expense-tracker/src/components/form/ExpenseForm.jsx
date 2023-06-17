@@ -86,8 +86,7 @@ const ExpenseForm = () => {
                     name='Add Income'
                     className='sub-btn'
                 >
-                    <i className="fa-solid fa-plus"></i>
-                    Add Expense
+                    <i className="fa-solid fa-plus"></i> Add Expense
                 </button>
             </div>
         </form>

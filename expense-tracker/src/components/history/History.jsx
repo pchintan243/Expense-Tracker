@@ -14,13 +14,13 @@ const History = () => {
                 const { _id, title, amount, type } = item
                 return (
                     <div key={_id} className="history-item">
-                        <p style={{
+                        <p className='history-p-tag' style={{
                             color: type === 'expense' ? 'red' : '#42AD00'
                         }}>
                             {title}
                         </p>
 
-                        <p style={{
+                        <p className='history-p-tag' style={{
                             color: type === 'expense' ? 'red' : '#42AD00'
                         }}>
                             {

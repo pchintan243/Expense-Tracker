@@ -1,10 +1,10 @@
-/* .dashaboard-container {
-
-} */
-
 .dashboard-inner {
     padding: 2rem 1.5rem;
     width: 100%;
+}
+
+.h1-dashboard {
+    padding-bottom: 1rem;
 }
 
 .stats-con {
@@ -38,10 +38,14 @@
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dashboard-p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: rgba(34, 34, 96, .5);
 }
@@ -57,7 +61,7 @@
 .balance-p {
     color: #42AD00;
     opacity: 0.6;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .history-con {
