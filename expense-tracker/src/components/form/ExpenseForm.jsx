@@ -4,8 +4,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../../context/globalContext';
 import './form.css'
 
-const Form = () => {
-    const { addIncome, getIncome } = useGlobalContext()
+const ExpenseForm = () => {
+    const { addExpense, getExpense } = useGlobalContext()
     const [inputState, setInputState] = useState({
         title: '',
         amount: '',
@@ -22,8 +22,8 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addIncome(inputState)
-        getIncome()
+        addExpense(inputState)
+        getExpense()
         setInputState({
             title: '',
             amount: '',
@@ -32,7 +32,6 @@ const Form = () => {
             description: '',
         })
     }
-
     return (
         <form onSubmit={handleSubmit} className='form-tag'>
             <div className="input-control">
@@ -40,7 +39,7 @@ const Form = () => {
                     type="text"
                     value={title}
                     name={'title'}
-                    placeholder="Salary Title"
+                    placeholder="Expense Title"
                     onChange={handleInput('title')}
                     className='field-tag'
                 />
@@ -49,7 +48,7 @@ const Form = () => {
                 <input value={amount}
                     type="text"
                     name={'amount'}
-                    placeholder={'Salary Amount'}
+                    placeholder={'Expense Amount'}
                     onChange={handleInput('amount')}
                     className='field-tag'
                 />
@@ -69,13 +68,13 @@ const Form = () => {
             <div className="selects input-control">
                 <select required value={category} className='field-tag' name="category" id="category" onChange={handleInput('category')}>
                     <option value="" disabled >Select Option</option>
-                    <option value="salary">Salary</option>
-                    <option value="freelancing">Freelancing</option>
-                    <option value="investments">Investiments</option>
-                    <option value="stocks">Stocks</option>
-                    <option value="bitcoin">Bitcoin</option>
-                    <option value="bank">Bank Transfer</option>
-                    <option value="youtube">Youtube</option>
+                    <option value="education">Education</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="health">Health</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="takeaways">Takeaways</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="travelling">Travelling</option>
                     <option value="other">Other</option>
                 </select>
             </div>
@@ -88,11 +87,11 @@ const Form = () => {
                     className='sub-btn'
                 >
                     <i className="fa-solid fa-plus"></i>
-                    Add Income
+                    Add Expense
                 </button>
             </div>
         </form>
     )
 }
 
-export default Form
+export default ExpenseForm

@@ -5,6 +5,7 @@ import { useGlobalContext } from '../../context/globalContext';
 import IncomeItem from '../incomeItem/IncomeItem';
 
 const Income = () => {
+
     const { incomes, getIncome, deleteIncome, totalIncome } = useGlobalContext()
     useEffect(() => {
         getIncome()
@@ -14,7 +15,7 @@ const Income = () => {
         <div className="main-income">
             <div className="income-inner">
                 <h1>Incomes</h1>
-                <h2 className="total-income">Total Income: <span className='span-tag'>${totalIncome()}</span></h2>
+                <h2 className="total-income">Total Income: <span className={window.location.pathname === '/expense' ? 'expense-span-tag' : 'income-span-tag'}>${totalIncome()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
                         <Form />

@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import "../income/income.css"
-import Form from '../form/Form'
 import { useGlobalContext } from '../../context/globalContext';
 import IncomeItem from '../incomeItem/IncomeItem';
+import ExpenseForm from '../form/ExpenseForm';
 
 const Expense = () => {
+
     const { expenses, getExpense, deleteExpense, totalExpense } = useGlobalContext()
     useEffect(() => {
         getExpense()
@@ -14,10 +15,10 @@ const Expense = () => {
         <div className="main-income">
             <div className="income-inner">
                 <h1>Expenses</h1>
-                <h2 className="total-income">Total Expense: <span className='span-tag'>${totalExpense()}</span></h2>
+                <h2 className="total-income">Total Expense: <span className={window.location.pathname === '/incomes' ? 'income-span-tag' : 'expense-span-tag'}>${totalExpense()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
-                        <Form />
+                        <ExpenseForm />
                     </div>
                     <div className="incomes">
                         {expenses.map((expense) => {
