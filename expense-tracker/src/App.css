@@ -27,3 +27,8 @@
 .main::-webkit-scrollbar {
     width: 0;
 }
+
+h1,
+h2 {
+    color: #222260;
+}
